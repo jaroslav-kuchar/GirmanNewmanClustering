@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: cz.cvut.fit.krizeji1.girvan_newman
+OpenIDE-Module-Localizing-Bundle: cz/cvut/fit/krizeji1/girvan_newman/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
