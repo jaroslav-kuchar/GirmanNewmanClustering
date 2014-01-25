@@ -103,7 +103,9 @@
                     </run-dependency>
                 </dependency>
             </module-dependencies>
-            <public-packages/>
+            <public-packages>
+                <package>cz.cvut.fit.krizeji1.girvan_newman</package>
+            </public-packages>
         </data>
     </configuration>
 </project>
