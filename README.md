@@ -23,7 +23,7 @@ Then window will popup and you can select number of clusters.
 * algorithm has no parameters
 
 ## Gephi Toolkit
-Algorithm can be used with Gephi toolkit, just use method ''setPreferredNumberOfClusters(int clusters)'' before calling method ''execute(GraphModel gm)''.
+Algorithm can be used with Gephi toolkit, just use method `setPreferredNumberOfClusters(int clusters)` before calling method `execute(GraphModel gm)`
 
 ## License
 The GPL version 3, http://www.gnu.org/licenses/gpl-3.0.txt
