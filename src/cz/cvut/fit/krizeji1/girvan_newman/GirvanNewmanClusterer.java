@@ -132,7 +132,7 @@ public class GirvanNewmanClusterer implements Clusterer, LongTask {
 
     @Override
     public Cluster[] getClusters() {
-        if (result.isEmpty()) {
+        if (result == null || result.isEmpty()) {
             return null;
         }
         return result.toArray(new Cluster[selectedClustersCount]);
