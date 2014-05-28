@@ -1,15 +1,14 @@
 package cz.cvut.fit.krizeji1.girvan_newman;
 
 import cz.cvut.fit.krizeji1.edge_betweenness.EdgeBetweenness;
+import cz.cvut.fit.krizeji1.girvan_newman.multicolour.GraphColorizer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-import cz.cvut.fit.krizeji1.multicolour.attribute.GraphColorizer;
 import org.gephi.clustering.api.Cluster;
 import org.gephi.clustering.spi.Clusterer;
 import org.gephi.data.attributes.api.AttributeColumn;
@@ -115,13 +114,15 @@ public class GirvanNewmanClusterer implements Clusterer, LongTask {
         }
 
         result = clusters.get(selectedClustersCount);
-
+        
         AttributeTable nodeTable = Lookup.getDefault().lookup(AttributeController.class).getModel().getNodeTable();
+
         GraphColorizer c = new GraphColorizer(nodeTable);
         if (result != null && result.size() > 0) {
             c.colorizeGraph(result.toArray(new Cluster[selectedClustersCount]));
         }
-
+        
+        
         if (progress != null) {
             this.progress.finish(NbBundle.getMessage(GirvanNewmanClusterer.class, "GirvanNewmanClusterer.finished"));
         }
